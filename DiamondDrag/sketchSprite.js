@@ -1,7 +1,12 @@
 //This is the main program for the game "DiamondDrag"
 
 var target, diamond1, diamond2, diamond3, draggedSprite;
+let inconsolata;
+var removedCounter = 0;
 
+function preload(){
+    inconsolata = loadFont('DDassets/Inconsolata-Regular.ttf');
+}
 function setup(){
     createCanvas(800, 400);
     
@@ -18,10 +23,6 @@ function setup(){
     diamond1.addImage(loadImage('DDassets/diamondedited.png'));
     diamond2.addImage(loadImage('DDassets/diamondedited.png'));
     diamond3.addImage(loadImage('DDassets/diamondedited.png'));
-    //Make objects track mouse status TODO: is this needed?
-    //diamond1.mouseActive = true;
-    //diamond2.mouseActive = true;
-    //diamond3.mouseActive = true;
     
     //Create collider for target
     target.setCollider('circle', 0, 0, 5);
@@ -91,5 +92,22 @@ function draw(){
         diamond3.remove();
         draggedSprite = null;
     }
+
+    endGame();
+
     drawSprites();
+}
+
+function endGame(){
+    if((diamond1.removed == true) && (diamond2.removed == true) && (diamond3.removed == true)){
+        target.remove();
+        textFont(inconsolata);
+        textSize(width / 10);
+        textAlign(CENTER, CENTER);
+        //let time = millis(); //Leftover code for possible WEBGL implementation
+        //rotateX(time / 1000);
+        //rotateY(time / 1234);
+        fill(34, 139, 34);
+        text('YOU DID IT!', 250, 200);
+    }
 }
