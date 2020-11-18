@@ -1,7 +1,7 @@
 # fmsproject
 
 links:
-1. Diamond Drag:https://github.com/amandahaffner/fmsproject/tree/DiamondDrag
+1. Diamond Drag:https://github.com/amandahaffner/fmsproject/tree/main/DiamondDrag
 2. Potty Party: https://editor.p5js.org/jkebe/sketches/K2maMVnHI
 3. Spelling Champs: https://editor.p5js.org/sblossom/sketches/Nw9_MbB5Y
 
