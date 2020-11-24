@@ -4,9 +4,9 @@ let img1;
 let img2;
 let img3;
 function preload() {
-  img1 = loadImage('/assets/potty party.png');
-  img2 = loadImage('/assets/diamonddrag.png');
-  img3 = LoadImage('/assets/spelling champs.png');
+  img1 = loadImage('/GUI/assets/potty party.png');
+  img2 = loadImage('/GUI/assets/diamonddrag.png');
+  img3 = LoadImage('/GUI/assets/spelling champs.png');
 }
 function setup() {
  
@@ -18,9 +18,9 @@ function setup() {
   b3 = createButton("Spelling Champs", 125, 200, 175);
   
   gui.loadStyle("Blue");
-  image (img2, 50, 300)// (width, height);
-  image (img1, 125, 300)//( w, h);
-  image (img3, 225, 300)//( w, h);
+  image(img2, 50, 300);// (width, height);
+  image(img1, 125, 300);//( w, h);
+  image(img3, 225, 300);//( w, h);
 }
 
 function draw() {
