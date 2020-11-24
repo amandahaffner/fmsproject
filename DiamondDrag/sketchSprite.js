@@ -4,7 +4,7 @@ var target, diamond1, diamond2, diamond3, draggedSprite;
 let inconsolata;
 var removedCounter = 0;
 
-function preload(){
+function preload(){ //Function to load animations to switch into
     diamondAnimation = loadAnimation("DDassets/diamondedited.png", "DDassets/diamondeditedsideways.png");
     inconsolata = loadFont('DDassets/InconsolataUltraExpanded-ExtraBold.ttf');
 }
@@ -86,30 +86,31 @@ function setup(){
 function draw(){
     background(255, 255, 255);
 
-    if(draggedSprite != null){
+    if(draggedSprite != null){ //Actively reposition each sprite
         draggedSprite.position.x = mouseX;
         draggedSprite.position.y = mouseY;
     }
 
-    if(diamond1.collide(target)){
+    if(diamond1.collide(target)){ //If diamond1 collides with the target, diamond1 disappears
         diamond1.remove();
         draggedSprite = null;
     }
-    if(diamond2.collide(target)){
+    if(diamond2.collide(target)){ //If diamond2 collides with the target, diamond2 disappears
         diamond2.remove();
         draggedSprite = null;
     }
-    if(diamond3.collide(target)){
+    if(diamond3.collide(target)){ //If diamond3 collides with the target, diamond3 disappears
         diamond3.remove();
         draggedSprite = null;
     }
 
-    endGame();
+    endGame(); //Call endGame() to check if all diamonds are removed, and prompt the user accordingly
 
     drawSprites();
 }
 
 function endGame(){
+    //If all diamonds have been successfully removed, congratulate user once they finish
     if((diamond1.removed == true) && (diamond2.removed == true) && (diamond3.removed == true)){
         target.remove();
         textFont(inconsolata);
