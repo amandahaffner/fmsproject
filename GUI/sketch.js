@@ -34,15 +34,15 @@ function draw() {
   
   if(b1.isPressed) {
     print(b1.label + " is loading...");
-    window.open('https://editor.p5js.org/jkebe/sketches/K2maMVnHI');
+    window.open('https://teward-52.github.io/fmsproject/PottyParty/');
   } 
   if(b2.isPressed) {
     print(b2.label + " is loading...");
-    window.open(''); //trent's link here
+    window.open('https://teward-52.github.io/fmsproject/DiamondDrag/');
   }
   if(b3.isPressed) {
     print(b3.label + " is loading...");
-    window.open('https://editor.p5js.org/sblossom/sketches/Nw9_MbB5Y');
+    window.open('https://teward-52.github.io/fmsproject/SpellingChamps/');
   }
   
 }
