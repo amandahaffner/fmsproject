@@ -4,23 +4,23 @@ let img1;
 let img2;
 let img3;
 function preload() {
-  img1 = loadImage('GUI/assets/potty party.png');
-  img2 = loadImage('GUI/assets/diamonddrag.png');
-  img3 = LoadImage('GUI/assets/spelling champs.png');
+  img1 = loadImage('assets/rsz_potty_party.png');
+  img2 = loadImage('assets/rsz_diamonddrag.png');
+  img3 = loadImage('assets/rsz_spelling_champs.png');
 }
 function setup() {
  
   createCanvas(400, 400);
   gui = createGui();
   
-  b1 = createButton("Potty Party", 50, 150);
-  b2 = createButton("Diamond Drag", 200, 150, 150);
-  b3 = createButton("Spelling Champs", 125, 200, 175);
+  b1 = createButton("Potty Party", 50, 200);
+  b2 = createButton("Diamond Drag", 200, 200, 150);
+  b3 = createButton("Spelling Champs", 115, 325, 175);
   
   gui.loadStyle("Blue");
-  image(img2, 50, 300);// (width, height);
-  image(img1, 125, 300);//( w, h);
-  image(img3, 225, 300);//( w, h);
+  //image(img2, 50, 300);
+  //image(img1, 125, 300);
+  //image(img3, 225, 300);
 }
 
 function draw() {
@@ -31,7 +31,11 @@ function draw() {
   strokeWeight(1.5);
   textSize(60);
   text('Toddler Tap', 45, 100);
-  
+
+  image(img2, 230, 120);
+  image(img1, 75, 120);
+  image(img3, 150, 250);
+
   if(b1.isPressed) {
     print(b1.label + " is loading...");
     window.open('https://teward-52.github.io/fmsproject/PottyParty/');
