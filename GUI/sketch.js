@@ -30,7 +30,7 @@ function draw() {
   stroke(color(0, 0, 255));
   strokeWeight(1.5);
   textSize(60);
-  text('Toddler Touch', 15,100);
+  text('Toddler Tap', 15,100);
   
   if(b1.isPressed) {
     print(b1.label + " is loading...");
