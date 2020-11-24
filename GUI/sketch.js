@@ -4,9 +4,9 @@ let img1;
 let img2;
 let img3;
 function preload() {
-  img1 = loadImage('/GUI/assets/potty party.png');
-  img2 = loadImage('/GUI/assets/diamonddrag.png');
-  img3 = LoadImage('/GUI/assets/spelling champs.png');
+  img1 = loadImage('GUI/assets/potty party.png');
+  img2 = loadImage('GUI/assets/diamonddrag.png');
+  img3 = LoadImage('GUI/assets/spelling champs.png');
 }
 function setup() {
  
