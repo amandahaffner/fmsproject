@@ -4,9 +4,9 @@ let img1;
 let img2;
 let img3;
 function preload() {
- // img1 = loadImage('');
- // img2 = loadImage('');
-  //img3 = LoadImage('');
+  img1 = loadImage('/assets/potty party.png');
+  img2 = loadImage('/assets/diamonddrag.png');
+  img3 = LoadImage('/assets/spelling champs.png');
 }
 function setup() {
  
@@ -18,9 +18,9 @@ function setup() {
   b3 = createButton("Spelling Champs", 125, 200, 175);
   
   gui.loadStyle("Blue");
- //image (img2, 50, 300, width, height);
- // image (img1, 125, 300, w, h);
-  //image (img3, 225, 300, w, h);
+  image (img2, 50, 300)// (width, height);
+  image (img1, 125, 300)//( w, h);
+  image (img3, 225, 300)//( w, h);
 }
 
 function draw() {
@@ -30,7 +30,7 @@ function draw() {
   stroke(color(0, 0, 255));
   strokeWeight(1.5);
   textSize(60);
-  text('Toddler Tap', 15,100);
+  text('Toddler Tap', 45, 100);
   
   if(b1.isPressed) {
     print(b1.label + " is loading...");
