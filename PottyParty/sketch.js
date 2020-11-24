@@ -1,12 +1,16 @@
+//variable for whether the game is in progress or not.
 var inProgress = 0;
-var endMsg = "Start at the white, go to the yellow";
+//variable created for message within game, message changes.
+var endMsg = "Start at the yellow, go to the white";
 
 function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
+  
   //build maze
+  
   noStroke();
   background(0,200,200);
   fill("gray");
@@ -21,21 +25,24 @@ function draw() {
   rect(360, 0, 40, 40);
   
   //start and end blocks
-  fill('white');
+  fill('yellow');
   rect(0,0, 40, 12);
-  fill("yellow");
+  fill("white");
   rect(260, 0, 40, 12);
   
+  //creation of message text
   textSize(22);
-    stroke("black");
     fill("white");
     text(endMsg, width/2-200, height/2);
   
+  //if the game is in progress
   if(inProgress == 1) {
     strokeWeight(15);
+    //mouse is displayed as brown dot in game
     stroke('brown');
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
+  //if the mouse hits one of the gray blocks, the losing message appears.
   
   if (mouseX > 0 && mouseX < 40 && mouseY >0 && mouseY < 12)
     {
@@ -80,6 +87,7 @@ function draw() {
     } 
   if (mouseX > 260 && mouseX < 300 && mouseY > 0 && mouseY < 12)
     {
+      //if player reaches end without hitting gray blocks, victory message appears.
       if (endMsg == "")
       {
         endMsg = "Great flushin'!";
@@ -89,4 +97,3 @@ function draw() {
   
   
 }
-
