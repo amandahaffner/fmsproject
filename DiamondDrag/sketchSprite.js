@@ -3,6 +3,7 @@ var diamondAnimation;
 var target, diamond1, diamond2, diamond3, draggedSprite;
 let inconsolata;
 var removedCounter = 0;
+var instruction = "Click and drag each diamond onto the target.";
 
 function preload(){ //Function to load animations to switch into
     diamondAnimation = loadAnimation("DDassets/diamondedited.png", "DDassets/diamondeditedsideways.png");
@@ -86,6 +87,10 @@ function setup(){
 function draw(){
     background(255, 255, 255);
 
+    textSize(22);
+    fill("black");
+    text(instruction, 10, 20); //Prompt user with instructions
+
     if(draggedSprite != null){ //Actively reposition each sprite
         draggedSprite.position.x = mouseX;
         draggedSprite.position.y = mouseY;
@@ -112,7 +117,8 @@ function draw(){
 function endGame(){
     //If all diamonds have been successfully removed, congratulate user once they finish
     if((diamond1.removed == true) && (diamond2.removed == true) && (diamond3.removed == true)){
-        target.remove();
+        instruction = ""; //Remove instructions
+        target.remove(); //Remove target from canvas
         textFont(inconsolata);
         textSize(width / 20);
         textAlign(CENTER, CENTER);
