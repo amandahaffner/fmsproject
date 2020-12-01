@@ -19,11 +19,11 @@ function setup(){
 
     //Create diamond sprite objects
     //diamond1 = createSprite(300, 150, 77, 77);
-    diamond1 = createSprite(random(width), random(height), 77, 77); //New randomized diamond locations
+    diamond1 = createSprite(random(width-100), random(height-100), 77, 77); //New randomized diamond locations
     //diamond2 = createSprite(150, 70, 77, 77);
-    diamond2 = createSprite(random(width), random(height), 77, 77);
+    diamond2 = createSprite(random(width-100), random(height-100), 77, 77);
     //diamond3 = createSprite(75, 300, 77, 77);
-    diamond3 = createSprite(random(width), random(height), 77, 77);
+    diamond3 = createSprite(random(width-100), random(height-100), 77, 77);
     //Add diamond image to diamond sprite objects
     diamond1.addImage(loadImage('DDassets/diamondedited.png'));
     diamond2.addImage(loadImage('DDassets/diamondedited.png'));
